@@ -1,0 +1,26 @@
+<div class="row">
+    <h1 class="text-center">Now that you're logged on, try sending a request to the API</h1>
+    <br/>
+    <div class="center-block">
+        <div class="col-xs-5 col-xs-offset-1 well">
+            <h2 class="text-center">Api Calls</h2>
+            <br/>
+            <button class="btn btn-default btn-primary btn-block" ng-click="getSingleValue()">Request a value</button>
+            <br/>
+            <span ng-show="singlevalue">{{ singlevalue }}</span>
+            <br ng-hide="singlevalue" />
+        </div>
+        <div class="col-xs-5 well">
+            <h2 class="text-center">Security Calls</h2>
+            <br/>
+            <button class="btn btn-default btn-primary btn-block" ng-click="getAccessToken()">Refresh access token</button>
+            <button class="btn btn-default btn-warning btn-block" ng-click="logoff()">Log off</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="center-block">
+        <h2 class="text-center">Encoded Access Token</h2>
+        <pre class="col-xs-8 col-xs-offset-2" disabled>{{ accessToken }}</pre>
+    </div>
+</div>

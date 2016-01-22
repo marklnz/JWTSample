@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="identityWithJwtClient">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">Identity Token Client Sample</h1>
+        </div>
+        <div ng-view></div>
+    </div>
+
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script data-require="angular-route.js@1.4.8" data-semver="1.4.8" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+    
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/maincontroller.js"></script>
+    <script src="./scripts/logoncontroller.js"></script>
+    <script src="./scripts/tokenapi.js"></script>
+    <script src="./scripts/valuesapi.js"></script>
+    <script src="./scripts/authinterceptor.js"></script>
+</body>
+
+</html>
