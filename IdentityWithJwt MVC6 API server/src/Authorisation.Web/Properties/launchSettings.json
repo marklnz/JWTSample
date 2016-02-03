@@ -18,7 +18,8 @@
     "web": {
       "commandName": "web",
       "environmentVariables": {
-        "Hosting:Environment": "Development"
+        "Hosting:Environment": "Development",
+        "Data:DefaultConnection:ConnectionString": "Server=localhost;Database=Identity;Trusted_Connection=True;MultipleActiveResultSets=true"
       }
     }
   }
