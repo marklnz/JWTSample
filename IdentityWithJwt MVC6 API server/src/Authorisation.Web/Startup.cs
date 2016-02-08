@@ -150,11 +150,13 @@ namespace Authorisation.Web
                     {
                         // For all token exceptions, we return a plain old 401 with no message body.
                         context.Response.StatusCode = CmdServiceResult.ResultTypeToHttpCode(ResultType.Unauthenticated);
+                        context.Response.Headers["Access-Control-Allow-Origin"] = "*";
                     }
                     else if (error != null && error.Error != null)
                     {
                         // For all other exceptions, return a 500, again with no message body
                         context.Response.StatusCode = CmdServiceResult.ResultTypeToHttpCode(ResultType.InternalServerError);
+                        context.Response.Headers["Access-Control-Allow-Origin"] = "*";
                     }
 
                     else await next();
